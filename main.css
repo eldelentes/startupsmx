@@ -9,8 +9,9 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  background: #1A1A1A;
+  background: url(bg.svg) no-repeat center 0% #1A1A1A;
   position: relative;
+  background-size: 30%;
 }
 
 body:before {
@@ -155,5 +156,8 @@ a {
   font-size: 1rem;
 }
 
-/* @media only screen and (max-width: 600px) {
-} */
+@media only screen and (max-width: 600px) {
+  body {
+    background:no-repeat center 0% #1A1A1A;
+  }
+}
