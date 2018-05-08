@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background: #1A1A1A;
+  position: relative;
+}
+
+body:before {
+  content: '';
+  background-image: linear-gradient(-87deg, #8A26F5 19%, #51D5D5 58%, #65EB93 99%);
+  width: 100%;
+  position: absolute;
+  height: 0.3rem;
+  top: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-header {
+  padding: 2rem 0;
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header .logo {
+  font-size: 1rem;
+}
+
+.button {
+  background: #9c64ff;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.startups-cards {
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.startup-card {
+  background: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.startup-card__image {
+  padding: 2rem 0;
+}
+
+.startup-card__information {
+  width: 90%;
+}
+
+.startup-card__title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+}
+
+.startup-card__desc {
+  padding: 1rem 0;
+  font-size: 0.8em;
+}
+
+.startup-card__view-more {
+  color: #fff;
+  font-size: 0.8em;
+  padding: 1rem;
+  background: #232323;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.startup-card__view-more:hover {
+  background: #8A26F5;
+}
+
+.startup-card__categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+.startup-card__categories .tag {
+  margin: 0.1em;
+}
+
+.tag {
+  background: #9c64ff;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1em;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  border-radius: 100em;
+}
+
+.banner {
+  background: #8A26F5;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 0.5rem 0;
+}
+
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner a {
+  color: #fff;
+}
+
+.banner__close {
+  background: 0;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+/* @media only screen and (max-width: 600px) {
+} */
