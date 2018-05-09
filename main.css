@@ -12,6 +12,7 @@ body {
   background: url(bg.svg) no-repeat center 0% #1A1A1A;
   position: relative;
   background-size: 30%;
+  padding-bottom: 1.5rem;
 }
 
 body:before {
