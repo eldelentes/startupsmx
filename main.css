@@ -79,6 +79,11 @@ a {
   padding: 2rem 0;
 }
 
+.startup-card__image img {
+  height: 3em;
+  object-fit: contain;
+}
+
 .startup-card__information {
   width: 90%;
 }
@@ -158,6 +163,6 @@ a {
 
 @media only screen and (max-width: 600px) {
   body {
-    background:no-repeat center 0% #1A1A1A;
+    background: no-repeat center 0% #1A1A1A;
   }
 }
