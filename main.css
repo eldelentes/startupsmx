@@ -162,6 +162,33 @@ a {
   font-size: 1rem;
 }
 
+.categories-nav {
+  margin-bottom: 1rem;
+}
+
+.categories-nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categories-nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 1em 1em;
+  background: #000;
+  margin: 4px;
+  border-radius: 100em;
+}
+
+.categories-nav__link:hover ,
+.categories-nav__link.is-current {
+  background: #9c64ff;
+}
+
+
 @media only screen and (max-width: 600px) {
   body {
     background: no-repeat center 0% #1A1A1A;
