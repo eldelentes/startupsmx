@@ -54,20 +54,22 @@
     </section>
     <div id="app">
       <nav class="categories-nav">
-        <a v-on:click="filter" ref="link" class="categories-nav__link" href="#">💸 Fintech</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">📈 Cryptocurrency</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">⚙️ IoT</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">💊 Salud</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">💰 Crowdfunding</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">💵 Préstamos</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">💳 Pagos</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">👥 Marketplace</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">🛒 E-commerce</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">🚚 Envios</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">🚗Movilidad</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">✂️ SaaS</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">📹 Media</a>
-        <a v-on:click="filter" class="categories-nav__link" href="#">🎓 Educación</a>
+        <div class="container">
+          <a v-on:click="filter" ref="link" class="categories-nav__link" href="#">💸 Fintech</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">📈 Cryptocurrency</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">⚙️ IoT</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">💊 Salud</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">💰 Crowdfunding</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">💵 Préstamos</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">💳 Pagos</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">👥 Marketplace</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">🛒 E-commerce</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">🚚 Envios</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">🚗Movilidad</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">✂️ SaaS</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">📹 Media</a>
+          <a v-on:click="filter" class="categories-nav__link" href="javascript:void(0)">🎓 Educación</a>
+        </div>
       </nav>
       <section class="startups-cards">
         <article v-for="item in items" class="startup-card" data-categories="item['category']">
@@ -93,6 +95,6 @@
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app.min.js"></script>
   </body>
 </html>

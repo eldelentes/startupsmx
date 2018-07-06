@@ -8,11 +8,11 @@ var app = new Vue({
     },
     
     mounted: function(){
-       this.loadItems(); 
+       this.loadItems('');
     },
 
     methods: {
-        loadItems: function(){
+        loadItems: function(currentCategory){
             
             var self = this
             var app_id = "appn2FjzFlNxkwgjn";
@@ -25,6 +25,22 @@ var app = new Vue({
                 }
             ).then(function(response){
                 self.items = response.data.records
+                var currentItems = [];
+                if ( currentCategory !== '' && currentCategory !== undefined) {
+                    for (i = 0; i < self.items.length; i++) { 
+                        var item = self.items[i];
+                        
+                        for (j = 0; j < item.fields.Category.length; j++) { 
+                            
+                            if (item.fields.Category[j] == currentCategory) {
+                                currentItems.push(item)
+                                break
+                            }
+                        }
+                    }
+                    self.items = currentItems;
+                }
+
             }).catch(function(error){
                 console.log(error)
             })
@@ -35,21 +51,16 @@ var app = new Vue({
         },
 
         filter: function(e){
-            var currentCategory =  e.target.innerHTML
-            var currentItems = [];
+            this.currentCategory =  e.target.innerHTML
+            this.loadItems(this.currentCategory);
 
-            for (i = 0; i < this.items.length; i++) { 
-                var item = this.items[i];
-                
-                for (j = 0; j < item.fields.Category.length; j++) { 
-                    if (item.fields.Category[j] == currentCategory) {
-                        currentItems.push(item)
-                        break
-                    }
-                }
+            var links = document.getElementsByClassName("categories-nav__link");
+            for (i = 0; i < links.length; i++) {
+                links[i].classList.remove('is-current');
             }
-            this.items = currentItems;
-            console.log(currentCategory)
+            e.target.classList.add("is-current");
+
+
             // this.items = this.items.filter(item => item.categories_.includes(categories, category));
         }
 
